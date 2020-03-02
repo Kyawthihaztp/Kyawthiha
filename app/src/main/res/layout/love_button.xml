@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6d6d7"
+    android:padding="20dp"
+    tools:context=".MainActivity"
+    android:layout_weight="10">
+
+    <ImageView
+        android:background="@drawable/img_corner_round"
+        android:id="@+id/topimg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/test_one_pic"
+        app:layout_constraintVertical_weight="4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textcontainer"/>
+
+    <LinearLayout
+        android:weightSum="10"
+        android:id="@+id/textcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/white_background"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintVertical_weight="6"
+        app:layout_constraintTop_toBottomOf="@+id/topimg"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MY LOVE,"
+            android:textColor="#2820b4"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YOU LIKE A FLOWER"
+            android:textColor="#2820b4"
+            android:textSize="20sp"
+            />
+
+        <LinearLayout
+            android:layout_weight="0.5"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_grade_pink"
+                android:layout_margin="3dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Editor's Choice"
+                android:textColor="#FF6972"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_weight="7.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/paragraphOne"
+            android:textColor="#2820b4"
+            />
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:id="@+id/btncontainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="$99.9"
+                android:textColor="#2820b4"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/nextpage"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_background"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="order now"
+                android:textColor="#ffffff" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
